@@ -1,4 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
+import {Pressable} from "react-native"
 import { StyleSheet, Text, View } from 'react-native';
 
 export const Header = () => {
@@ -17,6 +18,31 @@ export const Header = () => {
            <Ionicons name="search" size={35} />
            <Ionicons name="ellipsis-vertical" size={35} />
         </View>
+
+        <View style={styles.HeaderButtons}>
+          <Pressable style={({pressed}) => pressed && styles.ButtonHover}>
+            {({pressed}) => (
+
+            
+          <Text style={[styles.ButtonText, pressed && styles.ButtonTextHover]}>Chat</Text>
+            )}
+          </Pressable>
+          <Pressable style={({pressed}) => pressed && styles.ButtonHover}>
+            {({pressed}) => (
+
+            
+          <Text style={[styles.ButtonText, pressed && styles.ButtonTextHover]}>Status</Text>
+            )}
+          </Pressable>
+          <Pressable style={({pressed}) => pressed && styles.ButtonHover}>
+            {({pressed}) => (
+
+            
+          <Text style={[styles.ButtonText, pressed && styles.ButtonTextHover]}>Calls</Text>
+            )}
+          </Pressable>
+        </View>
+       
         </View>
     )
 }
@@ -44,5 +70,26 @@ const styles = StyleSheet.create({
     TimeText: {
     fontSize: 20,
     fontWeight: 'bold', 
+    },
+    HeaderButtons: {
+      backgroundColor: "#FFE8CC",
+      marginTop: 15,
+      padding: 15,
+      display: "flex",
+      flexDirection: 'row',
+      justifyContent: "space-around"
+    },
+    ButtonText: {
+      color: "#F26A1B"
+    },
+    ButtonHover: {
+      backgroundColor: "#F26A1B",
+      paddingVertical: 8,
+      paddingHorizontal: 55,
+      borderRadius: 8,
+    },
+    ButtonTextHover: {
+      color: "white"
     }
+
 });
