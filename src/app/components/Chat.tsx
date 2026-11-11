@@ -1,4 +1,5 @@
 import { Image, Text, StyleSheet, View } from "react-native";
+import {Button} from "./Button"
 
 
 const chats = [
@@ -73,6 +74,8 @@ export const Chats = () => {
             <Text style={styles.TextIcon}>✓✓</Text>
             <Text style={styles.chatsIcons}>✓✓</Text>
             <Text style={styles.TextIcons}>✓✓</Text>
+
+            <Button />
         </View>
     )
 }
