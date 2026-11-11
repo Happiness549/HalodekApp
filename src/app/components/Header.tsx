@@ -2,18 +2,14 @@ import { Ionicons } from '@expo/vector-icons';
 import {Pressable} from "react-native"
 import { StyleSheet, Text, View } from 'react-native';
 
+
+
 export const Header = () => {
 
     return(
-        <View style={styles.container}
-        >
-        <Text style={styles.TimeText}>9:41</Text>
-        <View style={styles.Ionicons}>
-            <Ionicons name="battery-full" size={20}  />
-            <Ionicons name="wifi" size={20}  />
-            <Ionicons name="cellular" size={20}  />
-        </View>
-         <Text style={styles.HeaderText}>HALODEK</Text>
+        <View style={styles.container}>
+       
+        <Text style={styles.HeaderText}>HALODEK</Text>
         <View style={styles.Ionicons}>
            <Ionicons name="search" size={35} />
            <Ionicons name="ellipsis-vertical" size={35} />
@@ -58,8 +54,9 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     gap: 10, 
-    justifyContent: 'flex-end',
-    marginBottom: 10,
+    position: 'absolute',
+    right: 10,
+    top: 10,
     color: 'black',
   },
     HeaderText: {
@@ -73,7 +70,7 @@ const styles = StyleSheet.create({
     },
     HeaderButtons: {
       backgroundColor: "#FFE8CC",
-      marginTop: 15,
+      marginTop: 35,
       padding: 15,
       display: "flex",
       flexDirection: 'row',
