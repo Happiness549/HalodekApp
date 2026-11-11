@@ -1,7 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
-import {Pressable} from "react-native"
-import { StyleSheet, Text, View } from 'react-native';
-
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import {HoverButton} from "./Buttons"
 
 
 export const Header = () => {
@@ -14,6 +13,8 @@ export const Header = () => {
            <Ionicons name="search" size={35} />
            <Ionicons name="ellipsis-vertical" size={35} />
         </View>
+
+       
 
         <View style={styles.HeaderButtons}>
           <Pressable style={({pressed}) => pressed && styles.ButtonHover}>
@@ -87,6 +88,15 @@ const styles = StyleSheet.create({
     },
     ButtonTextHover: {
       color: "white"
+    },
+    chatBtn: {
+      backgroundColor: "#FFE8CC",
+      paddingVertical: 8,
+      paddingHorizontal: 55,
+      
+    },
+    btnHover: {
+      backgroundColor: "#F26A1B",
     }
 
 });

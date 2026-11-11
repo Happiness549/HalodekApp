@@ -1,5 +1,6 @@
 import { Image, Text, StyleSheet, View } from "react-native";
 import {Button} from "./Button"
+import {Pressable} from "react-native"
 
 
 const chats = [
@@ -61,7 +62,7 @@ export const Chats = () => {
             {chats.map((item, index) =>(
             <View key={index}>
               
-                <Text style={styles.chats}>{item.name}</Text>
+                <Text style={styles.chatsName}>{item.name}</Text>
                 <Text style={styles.chatsTime}>{item.time}</Text>
                 <Text style={styles.chats}>{item.message}</Text>
                
@@ -74,7 +75,12 @@ export const Chats = () => {
             <Text style={styles.TextIcon}>✓✓</Text>
             <Text style={styles.chatsIcons}>✓✓</Text>
             <Text style={styles.TextIcons}>✓✓</Text>
-
+            <Pressable style={styles.chatButton}>
+              <Text>2</Text>
+            </Pressable>
+            <Pressable style={styles.chatButton2}>
+              <Text>2</Text>
+            </Pressable>
             <Button />
         </View>
     )
@@ -96,6 +102,11 @@ const styles = StyleSheet.create({
   chats: {
     marginLeft: 80,
     padding: 4,
+  },
+  chatsName: {
+    marginLeft: 80,
+    padding: 4,
+    fontWeight: "bold",
   },
   chatsTime: {
     position: 'absolute',
@@ -134,4 +145,27 @@ const styles = StyleSheet.create({
     color: '#F26A1B',
     marginTop: 530,
   },
+  chatButton: {
+    backgroundColor: "#F26A1B",
+    borderRadius: 25,
+    justifyContent: "center",
+    alignItems: "center",
+    width: 25,
+    height: 25,
+    position: 'absolute',
+    top: 170,
+    right: 16,
+  },
+  chatButton2: {
+    backgroundColor: "#F26A1B",
+    borderRadius: 25,
+     justifyContent: "center",
+    alignItems: "center",
+    width: 25,
+    height: 25,
+    position: 'absolute',
+    right: 16,
+    top: 100,
+  
+  }
 })

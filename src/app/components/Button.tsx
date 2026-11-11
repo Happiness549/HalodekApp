@@ -1,8 +1,9 @@
 import {Pressable} from "react-native"
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, Text, View } from 'react-native';
-export const Button = () => {
 
+
+export const Button = () => {
     return(
         <Pressable style={styles.button}>
           <Ionicons name="add" size={25} color="white" />
@@ -20,8 +21,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     position: "absolute",
-    bottom: 80,
-    right: 12,
+    bottom: 120,
+    right: 18,
   },
   })
 
