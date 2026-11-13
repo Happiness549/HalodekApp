@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import {HoverButton} from "./Buttons"
+import { Pressable, StyleSheet, Text, View, Button } from "react-native";
+import TabBar from "./Buttons"
+
 
 
 export const Header = () => {
@@ -14,31 +15,8 @@ export const Header = () => {
            <Ionicons name="ellipsis-vertical" size={35} />
         </View>
 
-       
+      <TabBar/>
 
-        <View style={styles.HeaderButtons}>
-          <Pressable style={({pressed}) => pressed && styles.ButtonHover}>
-            {({pressed}) => (
-
-            
-          <Text style={[styles.ButtonText, pressed && styles.ButtonTextHover]}>Chat</Text>
-            )}
-          </Pressable>
-          <Pressable style={({pressed}) => pressed && styles.ButtonHover}>
-            {({pressed}) => (
-
-            
-          <Text style={[styles.ButtonText, pressed && styles.ButtonTextHover]}>Status</Text>
-            )}
-          </Pressable>
-          <Pressable style={({pressed}) => pressed && styles.ButtonHover}>
-            {({pressed}) => (
-
-            
-          <Text style={[styles.ButtonText, pressed && styles.ButtonTextHover]}>Calls</Text>
-            )}
-          </Pressable>
-        </View>
        
         </View>
     )
@@ -89,14 +67,6 @@ const styles = StyleSheet.create({
     ButtonTextHover: {
       color: "white"
     },
-    chatBtn: {
-      backgroundColor: "#FFE8CC",
-      paddingVertical: 8,
-      paddingHorizontal: 55,
-      
-    },
-    btnHover: {
-      backgroundColor: "#F26A1B",
-    }
-
+   
+   
 });
